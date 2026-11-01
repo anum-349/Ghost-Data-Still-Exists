@@ -1,0 +1,2 @@
+[console_scripts]
+ghost-data-audit = ghost_data.cli:main

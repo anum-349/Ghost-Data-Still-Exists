@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghost-data-auditor"
+version = "0.1.0"
+description = "A deterministic deletion audit agent scaffold"
+requires-python = ">=3.11"
+dependencies = ["pydantic==2.12.5", "pdfplumber==0.11.9", "rapidocr-onnxruntime==1.4.4; python_version < '3.13'"]
+
+[project.scripts]
+ghost-data-audit = "ghost_data.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

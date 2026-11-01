@@ -1,0 +1,16 @@
+# Environments
+venv/
+.local/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing caches
+.pytest_cache/
+.pytest_tmp/
+
+
+config.bat
+node_modules
